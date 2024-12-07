@@ -1,4 +1,4 @@
-package Recursion.Recursion;
+package com.test;
 
 public class Sample2 {
 

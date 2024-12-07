@@ -1,21 +1,23 @@
 package com.recursion.easy;
 
-public class PalindromeUsingRecursion {
-	
-	private static int MAX_POS=0;
+interface A{
+	void m1();
+}
+interface B{
+	int m1();
+}
+
+public class PalindromeUsingRecursion{
 
 	public static void main(String[] args) {
+		PalindromeUsingRecursion p = new PalindromeUsingRecursion();
+		//p.m1();
 		String s = "MADAM";
-		if ((s.length() & 1) == 1) {
-			MAX_POS = s.length() / 2;
-		} else {
-			MAX_POS = (s.length() / 2) - 1;
-		}
 		System.out.println(isPalindrome(s, 0, s.length()-1));
 	}
 
 	private static boolean isPalindrome(String s, int firstHalfPos, int secondHalfPos) {
-		if (firstHalfPos <= MAX_POS) {
+		if (firstHalfPos < secondHalfPos) {
 			return (s.charAt(firstHalfPos) == s.charAt(secondHalfPos))
 					&& isPalindrome(s, firstHalfPos + 1, secondHalfPos - 1);
 		}
