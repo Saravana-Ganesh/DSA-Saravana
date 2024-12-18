@@ -1,8 +1,8 @@
 package com.linkedlist.easy;
 
 public class ListNode<T> {
-	T val;
-	ListNode<T> next=null;
+	public T val;
+	public ListNode<T> next=null;
 	
 	public ListNode(){
 		
